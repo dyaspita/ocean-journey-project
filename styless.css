@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom-right-radius: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.logo span {
+  font-weight: 600;
+  font-size: 18px;
+  color: #0077b6;
+}
+
+.menu a {
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #8a6d3b; /* Warna cokelat emas */
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #5a4727;
+}
+
+.login button {
+  background-color: #a78d60;
+  color: white;
+  padding: 6px 16px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.login button:hover {
+  background-color: #8a714f;
+}
+.map {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .packages {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .package {
+    width: 200px;
+    height: 150px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+  }
+  
+  .info {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .services {
+    text-align: center;
+    margin: 40px 0;
+    background: #b2e0f8;
+    padding: 20px;
+  }
+  
+  .service {
+    display: inline-block;
+    margin: 20px;
+  }
+  
