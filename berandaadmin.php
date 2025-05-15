@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Periksa apakah pengguna sudah login dan apakah mereka admin
+if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
+    header("Location: login.php"); // Alihkan ke halaman login jika bukan admin
+    exit;
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -14,30 +26,37 @@
 </head>
 <body class="bg-white">
 
-  <!-- Header -->
-  <header class="flex justify-between items-center px-8 py-4 bg-white shadow-md rounded-br-2xl">
+<header class="flex items-center justify-between px-8 py-4 bg-white shadow-md">
+  <!-- Logo dan Navigasi -->
+  <div class="flex items-center space-x-8">
     <div class="flex items-center space-x-2">
-      <img src="logolagi.png" alt="Logo" class="w-8 h-8" />
+      <img src="gambar/logolagi.png" alt="Logo" class="w-8 h-8" />
       <span class="font-semibold text-sky-700">Oceano Journey</span>
     </div>
-    <nav class="space-x-8 text-sm font-semibold text-[#8a6d3b]">
-      <a href="#" class="hover:text-yellow-600">Beranda</a>
-      <a href="destinasi.html" class="hover:text-yellow-600">Destinasi</a>
-      <a href="#" class="hover:text-yellow-600">Paket Tour</a>
-      <a href="#" class="hover:text-yellow-600">Tentang</a>
+    <nav class="flex space-x-4 font-semibold text-[#a78d60]">
+      <a href="berandamanajer.php" class="hover:text-[#8a6d3b]">Beranda</a>
+      <a href="datalaporan.php" class="hover:text-[#8a6d3b]">Data Laporan</a>
     </nav>
-    <div>
-      <button class="bg-[#a78d60] text-white text-sm px-4 py-1 rounded-full hover:bg-[#8a6d3b] transition">Login</button>
-    </div>
-  </header>
+  </div>
 
-  <section class="text-center py-12 px-6">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-600">
-            <img src="logo2.png" alt="Logo" class="mx-auto h-60">   
-            <div>
-                <h5 class="font-semibold mb-2">Siapa Kami?</h5>
-                <p>Oceano Journeys adalah perusahaan travel yang berfokus pada wisata pengalaman di Pacitan. Kami menawarkan paket wisata dengan konsep petualangan seru, eksplorasi alam, dan pengalaman budaya otentik. Dengan tim profesional dan pemandu berpengalaman, kami memastikan perjalanan Anda nyaman, aman, dan penuh kesan.</p>
-              </div>
+  <!-- Logout Button -->
+  <a href="logout.php" class="bg-[#a78d60] text-white text-sm px-4 py-1 rounded-full hover:bg-[#8a6d3b] transition">
+    Logout
+  </a>
+</header>
+
+
+  <section class="text-center py-12 px-6 bg-[#BFE5F7] text-gray-800">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <img src="logo2.png" alt="Logo" class="mx-auto h-60">   
+      <div class="text-center mt-12">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center">
+          <span class="text-[#a78d60]">WELCOME,</span>
+          <span class="text-white">ADMIN <?php echo $_SESSION['username']; ?>!</span>
+        </h1>
+      </div>
+    </div>
+      
   </section>
 
    <!-- Footer -->
