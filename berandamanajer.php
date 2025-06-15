@@ -31,12 +31,12 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'manajer') {
   <!-- Logo dan Navigasi -->
   <div class="flex items-center space-x-8">
     <div class="flex items-center space-x-2">
-      <img src="gambar/logolagi.png" alt="Logo" class="w-8 h-8" />
+      <img src="gambar/logo2.png" alt="Logo" class="w-8 h-8" />
       <span class="font-semibold text-sky-700">Oceano Journey</span>
     </div>
     <nav class="flex space-x-4 font-semibold text-[#a78d60]">
       <a href="berandamanajer.php" class="hover:text-[#8a6d3b]">Beranda</a>
-      <a href="datalaporan.php" class="hover:text-[#8a6d3b]">Data Laporan</a>
+      <a href="laporan_manajer.php" class="hover:text-[#8a6d3b]">Data Laporan</a>
     </nav>
   </div>
 
