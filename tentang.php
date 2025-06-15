@@ -19,7 +19,7 @@
   <div class="flex justify-between items-center max-w-screen-xl mx-auto">
     
     <div class="flex items-center space-x-2">
-      <img src="gambar/logolagi.png" alt="Logo" class="w-8 h-8" />
+      <img src="gambar/logolagi.png" alt="Logo" class="w-8 h-8">
       <span class="font-semibold text-sky-700 text-lg">Oceano Journey</span>
     </div>
     <!-- Navbar -->

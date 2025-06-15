@@ -54,7 +54,7 @@
           <!-- Eksplor -->
           <div class="bg-white rounded-xl shadow-md p-4 text-center">
             <img src="https://propertek.id/wp-content/uploads/2023/08/FSyWrV8aIAAKCDy.jpeg" class="rounded-xl h-100 w-full object-cover mb-4" />
-            <span class="text-base text-white bg-[#a78d60] px-3 py-1 rounded-full font-semibold">Rp. 150.000</span>
+            <span class="text-base text-white bg-[#a78d60] px-3 py-1 rounded-full font-semibold">Rp. 100.000</span>
             <h3 class="mt-2 text-xl font-bold text-[#a78d60]">Paket Eksplor 1</h3>
             <p class="text-sm mt-1 text-gray-600">Menjelajahi keindahan laut Pacitan di Pantai Watukarung, menyusuri Sungai Maron, dan mengenal sejarah di Museum SBY dalam sehari penuh pengalaman seru!</p>
             <a href="paketeksplor1.php" class="mt-4 inline-block w-full bg-[#a78d60] hover:bg-[#8a6d3b] text-white py-2 rounded-md font-semibold transition">
@@ -97,7 +97,7 @@
           <!-- Petualang -->
           <div class="bg-white rounded-xl shadow-md p-4 text-center">
             <img src="gambar/pantaiklayar.jpg" class="rounded-xl h-100 w-full object-cover mb-4" />
-            <span class="text-base text-white bg-[#a78d60] px-3 py-1 rounded-full font-semibold">Rp. 350.000</span>
+            <span class="text-base text-white bg-[#a78d60] px-3 py-1 rounded-full font-semibold">Rp. 450.000</span>
             <h3 class="mt-2 text-xl font-bold text-[#a78d60]">Paket Petualang 2</h3>
             <p class="text-sm mt-1 text-gray-600">Jelajahi Pacitan lebih dalam dengan kombinasi wisata pantai, sejarah, dan kuliner khas dalam perjalanan yang lebih luas dan santai.</p>
             <br>

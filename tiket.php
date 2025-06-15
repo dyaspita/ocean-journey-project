@@ -1,3 +1,23 @@
+<?php
+include 'koneksi.php';
+$conn = mysqli_connect("localhost", "root", "", "ocean-journey");
+
+$id_pesan = $_GET['id'] ?? '';
+
+$query = "SELECT p.*, d.nama_destinasi 
+          FROM pemesanan p 
+          JOIN destinasi d ON p.id_destinasi = d.id_desti 
+          WHERE p.id_pesan='$id_pesan' AND p.status='Diterima'";
+
+$result = mysqli_query($conn, $query);
+$tiket = mysqli_fetch_assoc($result);
+
+if (!$tiket) {
+  echo "<script>alert('Tiket tidak ditemukan atau belum dikonfirmasi.'); window.location.href='beranda.html';</script>";
+  exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -32,108 +52,97 @@
       </a>
     </div>
   </header>
+
   <div class="pt-24"></div>
 
-  <!-- Pembayaran Berhasil -->
-  <section class="py-20 px-6">
-    <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12 flex flex-col md:flex-row items-center gap-20">
-      <!-- Info -->
-      <div class="w-full md:w-1/2">
-        <div class="mb-6 flex items-center gap-2">
-          <img src="logolagi.png" alt="Logo kecil" class="w-20 h-20">
-        </div>
-        <div>
-             <h2 class="text-xl md:text-2xl font-bold text-[#a78d60]">Pembayaran Berhasil</h2>
-             <br>
-        </div>
-        <hr class="mb-4 border-[#a78d60]">
-        <p class="text-sm mb-6">Pembayaran telah dilakukan dan berhasil masuk.<br>Silakan cetak tiket Anda!</p>
-
-    <!-- Tiket Horizontal -->
-    <div class="bg-white border border-[#a78d60] rounded-t-xl rounded-b-xl overflow-hidden max-w-3xl mx-auto mb-8 shadow-md">
-    <!-- Header -->
-    <div class="bg-[#a78d60] text-white text-center text-sm font-semibold grid grid-cols-2 md:grid-cols-2">
-        <div class="py-2 border-r border-white">OCEANO JOURNEY</div>
-        <div class="py-2">OCEANO JOURNEY</div>
-    </div>
-
-    <!-- Isi Tiket -->
-    <div class="grid grid-cols-2 md:grid-cols-2 text-[#a78d60] text-sm p-4">
-        <!-- Bagian Kiri -->
-        <div class="flex-1 p-6 space-y-1 text-[#a78d60] relative">
-            <h2 class="text-xl font-bold">E1-711</h2>
-            <p class="text-[#a78d60]-700">Nama : <span class="font-medium">Angga Yunanda</span></p>
-            <p class="text-[#a78d60]-700">Paket : Eksplor 1 Hari</p>
-            <p class="text-[#a78d60]-700">Tanggal : 17/04/2025</p>
-            <p class="text-[#a78d60]-700">Jumlah : 4 Orang</p>
-            <p class="text-[#a78d60]-700">No. HP : 082885838939</p>
-
-      <!-- Garis putus-putus (seperti bisa disobek) -->
-      <div class="absolute top-0 right-0 h-full border-r-2 border-dashed border-[#a78d60]"></div>
-    </div>
-
-        <!-- Bagian Kanan -->
-        <div class="flex-1 p-6 space-y-1 text-[#a78d60] relative">
-        <div class="space-y-1">
-            <h2 class="text-xl font-bold">E1-711</h2>
-            <p class="text-[#a78d60]-700">Nama : <span class="font-medium">Angga Yunanda</span></p>
-            <p class="text-[#a78d60]-700">Tanggal : 17/04/2025</p>
-        </div>
-        <img class="w-24 mt-2 self-end" />
-        </div>
-    </div>
-    </div>
-
-        <button class="bg-[#a78d60] text-white px-6 py-2 rounded-full hover:bg-[#8a6d3b] transition shadow-md">
-          Download Tiket
-        </button>
+  <!-- Tiket -->
+    <div id="tiketArea" class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-8 text-[#a78d60] my-12">
+    <h1 class="text-center text-4xl font-bold mb-4">Tiket Anda</h1>
+  <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-xl p-8 text-[#a78d60] my-12">
+      <div class="bg-[#a78d60] text-white text-center font-semibold py-2">
+        OCEANO JOURNEY
       </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 p-6 text-sm">
+        <div class="space-y-2">
+         <div class="grid grid-cols-3 gap-2 text-sm">
+  <div class="font-semibold">ID Pemesanan</div>
+  <div>:</div>
+  <div><?= htmlspecialchars($tiket['id_pesan']) ?></div>
 
-      <!-- Gambar Pantai -->
-      <div class="w-full md:w-1/3">
-        <img src="https://i.pinimg.com/736x/4a/89/18/4a8918fd1b07d681e91f30fbc37b111b.jpg" alt="Pantai" class="rounded-xl shadow-md object-cover w-full h-full" />
+  <div class="font-semibold">Nama</div>
+  <div>:</div>
+  <div><?= htmlspecialchars($tiket['nama_plg']) ?></div>
+
+  <div class="font-semibold">Paket</div>
+  <div>:</div>
+  <div><?= htmlspecialchars($tiket['nama_destinasi']) ?></div>
+
+  <div class="font-semibold">Tanggal</div>
+  <div>:</div>
+  <div><?= htmlspecialchars($tiket['tgl_berangkat']) ?></div>
+
+  <div class="font-semibold">Jumlah</div>
+  <div>:</div>
+  <div><?= htmlspecialchars($tiket['jumlah_orang']) ?> Orang</div>
+
+  <div class="font-semibold">No. HP</div>
+  <div>:</div>
+  <div><?= htmlspecialchars($tiket['telepon']) ?></div>
+</div>
+
+        </div>
+        <div class="flex justify-center items-end mt-6 md:mt-0">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?data=<?= urlencode($tiket['id_pesan']) ?>&size=300x200" alt="QR Code" class="w-24 h-24" />
+        </div>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-white py-10 px-8">
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6 text-gray-600 text-sm">
+        <div class="mt-6 text-center">
+      <button onclick="cetakPDF()" class="bg-[#a78d60] text-white px-6 py-2 rounded-full hover:bg-[#8a6d3b] shadow">
+        Cetak Tiket (PDF)
+      </button>
+    </div>
+    </div>
+  </div>
+  </div>
+<!-- Footer -->
+  <footer class="bg-white py-10 px-8" id="tentang">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-gray-600">
       <div>
         <h5 class="font-semibold mb-2">OCEAN JOURNEY</h5>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Agent</a></li>
-          <li><a href="#">Testimony</a></li>
-        </ul>
+        <ul><li><a href="#">About</a></li><li><a href="#">Testimony</a></li></ul>
       </div>
       <div>
         <h5 class="font-semibold mb-2">HELP CENTER</h5>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Terms & Condition</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
+        <ul><li><a href="#">FAQ</a></li><li><a href="#">Terms & Condition</a></li><li><a href="#">Privacy Policy</a></li></ul>
       </div>
       <div>
         <h5 class="font-semibold mb-2">CONTACT US</h5>
         <ul>
-          <li>📞 081217263827</li>
+          <li>📞 081237823627</li>
           <li>📷 @oceano.journey</li>
-          <li>✉️ oceanojourney@gmail.com</li>
+          <li>✉️ oceanojurney@gmail.com</li>
         </ul>
       </div>
       <div>
-        <img src="logo2.png" alt="Logo" class="mx-auto h-24" />
+        <img src="gambar/logo2.png" alt="Logo" class="mx-auto h-40 hover:scale-105 transition duration-300">
       </div>
     </div>
   </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script>
+function cetakPDF() {
+  const element = document.getElementById('tiketArea');
+  html2pdf().set({
+    margin: 0.5,
+    filename: 'tiket-oceano-journey.pdf',
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2 },
+    jsPDF: { unit: 'in', format: 'A4', orientation: 'portrait' }
+  }).from(element).save();
+}
+</script>
+
 </body>
 </html>
-
-
-
-
-
-

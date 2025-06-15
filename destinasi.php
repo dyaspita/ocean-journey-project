@@ -10,6 +10,12 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
+      font-family: 'Poppins', sans-serif;
+      background-image: url('gambar/background2.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
     }
   </style>
 </head>

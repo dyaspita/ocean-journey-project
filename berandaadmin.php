@@ -26,29 +26,29 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
 </head>
 <body class="bg-white">
 
-<header class="flex items-center justify-between px-8 py-4 bg-white shadow-md">
-  <!-- Logo dan Navigasi -->
-  <div class="flex items-center space-x-8">
+<header class="fixed top-0 left-0 w-full z-50 bg-white shadow-md rounded-br-2xl px-8 py-4">
+  <div class="flex justify-between items-center max-w-screen-xl mx-auto">
+    <!-- Logo -->
     <div class="flex items-center space-x-2">
       <img src="gambar/logolagi.png" alt="Logo" class="w-8 h-8" />
-      <span class="font-semibold text-sky-700">Oceano Journey</span>
+      <span class="font-semibold text-sky-700 text-lg">Oceano Journey</span>
     </div>
-    <nav class="flex space-x-4 font-semibold text-[#a78d60]">
-      <a href="berandamanajer.php" class="hover:text-[#8a6d3b]">Beranda</a>
-      <a href="datalaporan.php" class="hover:text-[#8a6d3b]">Data Laporan</a>
+    <!-- Navbar Tengah -->
+    <nav class="space-x-8 text-sm font-semibold text-[#8a6d3b]">
+      <a href="berandaadmin.php" class="hover:text-yellow-600">Beranda</a>
+      <a href="konfirmasi_pemesanan.php" class="hover:text-yellow-600">Konfirmasi Pemesanan</a>
     </nav>
+    <!-- Logout Button -->
+    <a href="logout.php" class="bg-[#a78d60] text-white text-sm px-4 py-1 rounded-full hover:bg-[#8a6d3b] transition">
+      Logout
+    </a>
   </div>
-
-  <!-- Logout Button -->
-  <a href="logout.php" class="bg-[#a78d60] text-white text-sm px-4 py-1 rounded-full hover:bg-[#8a6d3b] transition">
-    Logout
-  </a>
 </header>
-
+<div class="pt-24"></div>
 
   <section class="text-center py-12 px-6 bg-[#BFE5F7] text-gray-800">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <img src="logo2.png" alt="Logo" class="mx-auto h-60">   
+      <img src="gambar/logo2.png" alt="Logo" class="mx-auto h-60">   
       <div class="text-center mt-12">
         <h1 class="text-4xl md:text-5xl font-extrabold text-center">
           <span class="text-[#a78d60]">WELCOME,</span>
@@ -85,8 +85,8 @@ if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
           <li>✉️ oceanojurney@gmail.com</li>
         </ul>
       </div>
-      <div>
-        <img src="logo2.png" alt="Logo" class="mx-auto h-40">
-      </div>
+   <div>
+        <img src="gambar/logo2.png" alt="Logo" class="mx-auto h-40 hover:scale-105 transition duration-300">
+      </div>     
     </div>
   </footer>
