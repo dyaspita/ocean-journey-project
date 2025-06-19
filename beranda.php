@@ -28,7 +28,7 @@
       <nav class="space-x-8 text-sm font-semibold text-[#8a6d3b]">
         <a href="beranda.php" class="hover:text-yellow-600">Beranda</a>
         <a href="destinasi.php" class="hover:text-yellow-600">Destinasi</a>
-        <a href="#pakettour.php" class="hover:text-yellow-600">Paket Tour</a>
+        <a href="pakettour.php" class="hover:text-yellow-600">Paket Tour</a>
         <a href="tentang.php" class="hover:text-yellow-600">Tentang</a>
       </nav>
       <a href="login.php" class="bg-[#a78d60] text-white text-sm px-4 py-1 rounded-full hover:bg-[#8a6d3b] transition">
