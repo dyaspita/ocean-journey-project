@@ -22,12 +22,12 @@
         <span class="font-semibold text-sky-700 text-lg">Oceano Journey</span>
       </div>
       <nav class="space-x-8 text-sm font-semibold text-[#8a6d3b]">
-        <a href="beranda.html" class="hover:text-yellow-600">Beranda</a>
-        <a href="destinasi.html" class="hover:text-yellow-600">Destinasi</a>
-        <a href="pakettour1.html" class="hover:text-yellow-600">Paket Tour</a>
-        <a href="tentang.html" class="hover:text-yellow-600">Tentang</a>
+        <a href="beranda.php" class="hover:text-yellow-600">Beranda</a>
+        <a href="destinasi.php" class="hover:text-yellow-600">Destinasi</a>
+        <a href="pakettour1.php" class="hover:text-yellow-600">Paket Tour</a>
+        <a href="tentang.php" class="hover:text-yellow-600">Tentang</a>
       </nav>
-      <a href="login.html" class="bg-[#a78d60] text-white text-sm px-4 py-1 rounded-full hover:bg-[#8a6d3b] transition">
+      <a href="login.php" class="bg-[#a78d60] text-white text-sm px-4 py-1 rounded-full hover:bg-[#8a6d3b] transition">
         Login
       </a>
     </div>
@@ -102,38 +102,29 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-white py-10 px-8">
+   <!-- Footer -->
+  <footer class="bg-white py-10 px-8" id="tentang">
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6 text-gray-600">
       <div>
-        <h5 class="font-semibold mb-2">OCEANO JOURNEY</h5>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Agent</a></li>
-          <li><a href="#">Testimony</a></li>
-        </ul>
+        <h5 class="font-semibold mb-2">OCEAN JOURNEY</h5>
+        <ul><li><a href="tentang.php">About</a></li></ul>
       </div>
       <div>
         <h5 class="font-semibold mb-2">HELP CENTER</h5>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Terms & Condition</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
+        <ul><li><a href="#">FAQ</a></li></ul>
       </div>
       <div>
         <h5 class="font-semibold mb-2">CONTACT US</h5>
         <ul>
-          <li>📞 081217263827</li>
+          <li>📞 081237823627</li>
           <li>📷 @oceano.journey</li>
-          <li>✉️ oceanojourney@gmail.com</li>
+          <li>✉️ oceanojurney@gmail.com</li>
         </ul>
       </div>
       <div>
-        <img src="logo2.png" alt="Logo" class="mx-auto h-32">
+        <img src="gambar/logo2.png" alt="Logo" class="mx-auto h-40 hover:scale-105 transition duration-300">
       </div>
     </div>
   </footer>
-
 </body>
 </html>
