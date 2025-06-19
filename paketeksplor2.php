@@ -57,17 +57,17 @@
 
     <!-- Gambar bertangga -->
     <div class="grid grid-cols-3 gap-3">
-        <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/74/2024/03/04/Pacitan-Camping-Paradise-4021668745.jpg"
+      <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/74/2024/03/04/Pacitan-Camping-Paradise-4021668745.jpg"
         alt="Spot 1" class="aspect-[3/2] object-cover rounded-xl shadow-md mt-16" />
         <img src="https://hypeabis.id/assets/content/20230820024436000000IMG20230820024229.jpg"
         alt="Spot 2" class="aspect-[3/2] object-cover rounded-xl shadow-md mt-16" />
         <img src="https://atourin.obs.ap-southeast-3.myhuaweicloud.com/images/destination/pacitan/pantai-pidakan-profile1653619721.jpeg?x-image-process=image/resize,p_100,limit_1/imageslim"
         alt="Spot 3" class="aspect-[3/2] object-cover rounded-xl shadow-md mt-16" />
-        <img src="https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/74/2024/03/04/Pacitan-Camping-Paradise-4021668745.jpg"
+        <img src="https://cdn.timesmedia.co.id/images/2021/12/06/Wisata-Sungai-Maron-3.jpg"
         alt="Spot 1" class="aspect-[3/2] object-cover rounded-xl shadow-md mt-16" />
-        <img src="https://hypeabis.id/assets/content/20230820024436000000IMG20230820024229.jpg"
+        <img src="https://pantainesia.com/wp-content/uploads/2021/01/Sumset-di-Pantai-Karang-Bolong-Pacitan.jpg"
         alt="Spot 2" class="aspect-[3/2] object-cover rounded-xl shadow-md mt-16" />
-        <img src="https://atourin.obs.ap-southeast-3.myhuaweicloud.com/images/destination/pacitan/pantai-pidakan-profile1653619721.jpeg?x-image-process=image/resize,p_100,limit_1/imageslim"
+        <img src="http://anekatempatwisata.com/wp-content/uploads/2014/04/Pantai-Klayar.jpg"
         alt="Spot 3" class="aspect-[3/2] object-cover rounded-xl shadow-md mt-16" />
     </div>
     </div>
